@@ -1,0 +1,9 @@
+import pyautogui
+import time
+
+time.sleep(3)  # Wait 5 seconds before running
+
+pyautogui.moveTo(100, 100, duration=2)
+pyautogui.click()
+pyautogui.typewrite("You are now being controlled by your computer.", interval=0.1)
+pyautogui.press("enter")
