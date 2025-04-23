@@ -1,0 +1,23 @@
+random_adresses = ['222.195.167.77', '210.193.162.92', '48.2.34.232']
+
+
+
+import requests
+
+def get_location(ip):
+    url = f"http://ip-api.com/json/{ip}"
+    response = requests.get(url).json()
+
+    if response["status"] == "success":
+        print(f"IP Address: {response['query']}")
+        print(f"Country: {response['country']}")
+        print(f"Region: {response['regionName']}")
+        print(f"City: {response['city']}")
+        print(f"Latitude: {response['lat']}, Longitude: {response['lon']}")
+        print(f"ISP: {response['isp']}")
+    else:
+        print("Could not retrieve location.")
+
+# Replace with your phone's public IP
+phone_ip = "222.195.167.77"
+get_location(phone_ip)
