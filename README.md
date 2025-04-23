@@ -1,5 +1,4 @@
-# Ethical-Hacking
-# DarkLayer Ethical Hacking Toolkit
+# DarkLayer Ethical Hacking
 
 **Innovation Unleashed.**
 
