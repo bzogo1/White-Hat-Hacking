@@ -1,0 +1,9 @@
+import socket
+
+def get_ip(website):
+    ip = socket.gethostbyname(website)
+    print(f"🌍 Website: {website}\n📍 IP Address: {ip}")
+
+# Example Usage
+website = input("Enter website without https:// or http:// (e.g., google.com): ")
+get_ip(website)
