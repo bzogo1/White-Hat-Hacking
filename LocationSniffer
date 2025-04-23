@@ -1,0 +1,9 @@
+import requests
+import time
+
+while True:
+    ip = requests.get("https://api64.ipify.org?format=json").json()["ip"]
+    location = requests.get(f"http://ip-api.com/json/{ip}").json()
+
+    print(f"Location: {location['city']}, {location['country']} - {location['lat']}, {location['lon']}")
+    time.sleep(10)  # Updates every 10 seconds
